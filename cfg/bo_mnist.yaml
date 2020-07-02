@@ -1,0 +1,27 @@
+dataset: 'gcd'
+dataroot: '/home/bingzhe/dataset/german_credit'
+train_csv: '/home/bingzhe/dataset/german_credit/exp1/train.csv'
+test_csv: '/home/bingzhe/dataset/german_credit/exp1/test.csv'
+imageSize: 224
+num_classes: 2
+num_folds: 4
+data_workers: 16
+batch_size: 256
+arch: 'mlp'
+
+log_level: 'INFO'
+log_config:
+  interval: 50
+num_epochs: 100
+work_dir: 'exp/sgd_mlp_gdc'
+checkpoint_config:
+  interval: 1
+resume: 'exp/sgd_mlp_gdc/latest.pth'
+load_from: None
+lr: 0.0006268043490560363
+beta1: 0.18203570803733438
+beta2: 0.6172823327251139
+weight_decay:  0.0009756634062989552
+lr_config:
+  policy: 'step'
+  step: 5
